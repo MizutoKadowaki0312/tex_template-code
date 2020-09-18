@@ -1,0 +1,57 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+\def\vector#1{\mbox{\boldmath $#1$}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hiresbb]{graphicx}
+\usepackage{ascmac}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{url}
+\usepackage{braket}
+\usepackage[colorlinks=true, bookmarks=true,
+bookmarksnumbered=true, bookmarkstype=toc, linkcolor=blue,
+urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage[version=3]{mhchem}
+\usepackage{wrapfig}
+\makeatletter
+ \renewcommand{\theequation}{%
+   \thesubsection.\arabic{equation}}
+  \@addtoreset{equation}{subsection}
+\makeatother
+%fill below.
+\title{}
+\author{}
+
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{3}
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+
+%画像に合わせて文章が改行される．
+\begin{wrapfigure}{l}[10pt]{0.5\textwidth}
+  \centering
+ \includegraphics[width=0.5\textwidth]{a.png}
+ \caption{キャプション。}
+\end{wrapfigure}
+
+
+%画像単体の出力
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[width=6cm,clip]{.png}
+    \caption{}
+    \label{fig:}
+    \end{center}
+\end{figure}
+
+
+
+
+
+\end{document}
